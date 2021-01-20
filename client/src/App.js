@@ -1,25 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 // import axios from 'axios';
 // import logo from './logo.svg';
 import './App.css';
-import useApplicationData from './hooks/useApplicationData'
+import Navbar from './components/Navbar';
+// import useApplicationData from './hooks/useApplicationData';
+import Accounts from './pages/Accounts';
+
 
 function App() {
   
-  const {state, setState} = useApplicationData();
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const artistList = state.earnings.map(comp => 
-    <li key ={comp.id}>
-      {comp.artist} {comp.rate} {comp.streams} {comp.earnings} {comp.payout}
-    </li> )
+  useEffect(() => {
+    setSearchTerm(searchTerm)
+  }, [searchTerm])
+
 
   return (
-    <div className="App">
-      <h1>hello</h1>
-      <ul>
-        {artistList}
-      </ul>
-    </div>
+    
+    <Router>
+      <Route path='/'>
+        <Navbar onSearchTermUpdate={setSearchTerm} />
+        <Accounts />
+      </Route>
+
+    </Router>
+   
   );
 }
 
