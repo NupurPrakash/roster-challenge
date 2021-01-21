@@ -1,5 +1,5 @@
 .navbar {
-  background-color: grey;
+  background-color: darkgrey;
   height: 60px;
   display: flex;
   align-items: center;
@@ -10,10 +10,19 @@
   padding: 10px;
   box-shadow: 2px 4px 10px #AAA;
 }
-
+.navbar__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 2px;
+}
+.navbar__company{
+  color: white;
+}
 .navbar__search {
   display: flex;
-  flex: 1 1;
+  flex: 1 ;
+  align-items: center;
+  border-radius: 24px;
   padding-right: 20px;
   padding-left: 10px;
 }
@@ -21,12 +30,14 @@
 .search__form {
   display: flex;
   width: 100%;
-  flex: 1 1 100%;
+  flex: 1 1 50%;
   height: 32px;
 }
 
-.radius {
+.navbar__searchInput {
   width: 100%;
+  border: none;
+
 }
 .navbar__searchIcon {
   padding: 5px;
@@ -36,5 +47,16 @@
 .navbar__icon {
   height: 40px !important;
 }
-
-
+.navbar__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+.header__optionFirst {
+  font-size: 11px;
+}
+.header__optionSecond {
+  font-size: 15px;
+  font-weight: 800;
+}

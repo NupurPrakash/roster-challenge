@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Table } from 'reactstrap';
+
 import useApplicationData from '../hooks/useApplicationData';
 
 function Accounts() {
@@ -16,31 +18,37 @@ function Accounts() {
    )
 
   return (
+    <>
     <div className='accounts__list'>
       <div className='accounts__artist'>
-        <table className='accounts__table'>
+        {/* <table className='accounts__table'> */}
+        <Table striped bordered hover responsive bordered>
+          <thead>
           <tr className='accounts__header'>
             <th className='accounts__artistname'>Artist</th> 
-            <th className='accounts__rate'>Rate per Stream</th> 
-            <th className='accounts__stream'>No Of Streaming</th> 
-            <th className='accounts__earnings'>Total earnings</th> 
+            <th className='accounts__rate'>Rate</th> 
+            <th className='accounts__stream'>Streams</th> 
+            <th className='accounts__earnings'>Earnings</th> 
             <th className='accounts__payout'>Payout</th> 
           </tr>
+
+          </thead>
+          <tbody>
           {artistAccount}
-        </table>
-      
+          </tbody>
+        </Table>
+         
+          {/* {artistAccount} */}
+        {/* </table> */}
       </div>
+     
       <div className='accounts__save'>
         <button className='account__update mr-20'>
           Save
         </button>
       </div>
-
-      
-     
-
-      
     </div>
+    </>
   )
 }
 
