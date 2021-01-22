@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 // import useApplicationData from './hooks/useApplicationData';
 import Accounts from './pages/Accounts';
+import Search from './components/Search';
 
 
 function App() {
@@ -24,6 +25,16 @@ function App() {
         <Navbar onSearchTermUpdate={setSearchTerm} />
         <Accounts />
       </Route>
+ 
+      <Route path='/search' render={({history}) =>
+      <>
+        <Navbar onSearchTermUpdate={setSearchTerm} searchTerm={setSearchTerm} />
+        {/* <Search history={history} onSearchTermUpdate={setSearchTerm} searchTerm={searchTerm} /> */}
+      </>
+      }/> 
+  
+
+    
 
     </Router>
    

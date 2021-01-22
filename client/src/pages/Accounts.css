@@ -1,16 +1,13 @@
-/* table,td,tr,th {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: left;
-} */
+
 .accounts__list {
   max-width: 800px;
-  /* margin-left: auto;
-  margin-right: auto; */
   display: inline-block;
+  /* display: flex; */
   text-align: center;
   align-items: center;
   margin-top: 20px;
+  padding-left: 300px ;
+
 }
 /* .accounts__artist {
   padding: 20px;
@@ -36,31 +33,31 @@
 .accounts__artistname {
   border: 1px solid black;
   display: flex;
-  width: 1400px;
+  width: 200px;
   text-align: center;
   padding: 5px;
 }
 .accounts__rate {
   border: 1px solid black;
-  width: 600px;
+  width: 200px;
   text-align: center;
   padding: 5px;
 }
 .accounts__stream {
   border: 1px solid black;
-  width: 600px;
+  width: 200px;
   text-align: center;
   padding: 5px;
 }
 .accounts__earnings {
   border: 1px solid black;
-  width: 600px;
+  width: 200px;
   text-align: center;
   padding: 5px;
 }
 .accounts__payout {
   border: 1px solid black;
-  width: 100px;
+  width: 200px;
   text-align: center;
   padding: 5px;
 
@@ -68,11 +65,12 @@
 
 
 .accounts__save {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 40px;
   padding-top: 50px;
   display: flex;
   align-items: center;
+  padding-left: 300px;
 }
 
 .account__update {

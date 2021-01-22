@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
+
 // import logo from '.../public/logo.png'
 import SearchIcon from '@material-ui/icons/Search';
 function Navbar(props) {
@@ -31,9 +33,9 @@ function Navbar(props) {
             />
            
             <div className='navbar__icon'>
-              {/* <Link to='/result' > */}
+              <Link to='/search' >
                 <SearchIcon className='navbar__searchIcon' />
-              {/* </Link> */}
+              </Link>
             </div>
             <div className='navbar__option'>
               <span className='header__optionFirst'>Welcome</span>
