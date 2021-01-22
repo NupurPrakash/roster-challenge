@@ -30,7 +30,7 @@ Filtering by the artist name
 !["Screenshot of Register"](https://github.com/NupurPrakash/roster-challenge/blob/master/docs/Home%20Page.png?raw=true)
 
 ### Screenshot of Search bar
-!["Screenshot of Search bar"]()
+!["Screenshot of Search bar"](https://github.com/NupurPrakash/roster-challenge/blob/master/docs/Search.png?raw=true)
 
 
 ## Project Setup

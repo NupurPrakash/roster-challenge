@@ -1,15 +1,8 @@
-
 import React from 'react';
 import { Table } from 'reactstrap';
-// import "react-table/react-table.css"
-
-
 import './Accounts.css';
 
-// import useApplicationData from '../hooks/useApplicationData';
-
 function Accounts(props) {
-  // const {state, setState} = useApplicationData();
   const artistAccount = props.state.earnings.map(comp => 
     <tr>
       <td className='accounts__artistname'>{comp.artist}</td>
@@ -17,7 +10,6 @@ function Accounts(props) {
       <td className='accounts__stream'>{comp.streams}</td>
       <td className='accounts__earnings'>{(comp.rate * comp.streams).toFixed(2)}</td>
       <td className='accounts__payout'><input type='checkbox'/></td>
-
     </tr>
    )
 

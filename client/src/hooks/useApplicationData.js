@@ -5,9 +5,6 @@ const useApplicationData = () => {
   const [state, setState] = useState({earnings: []});
   const [stateArtist, setStateArtist] = useState({earnings: []});
 
-  
-
-
   useEffect(() => {
     axios({
       method: 'GET',
@@ -16,7 +13,7 @@ const useApplicationData = () => {
     .then(result => {setState(prev => ({ ...prev, earnings: result.data})) 
                       setStateArtist(prev => ({ ...prev, earnings: result.data})) }
                     
-    )
+          )
     .catch((err) => console.log(err))
   }, []);
 

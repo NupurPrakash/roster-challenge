@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Accounts from './pages/Accounts';
-import Search from './components/Search';
 import useApplicationData from './hooks/useApplicationData';
 
 function App() {
