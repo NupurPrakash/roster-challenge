@@ -27,10 +27,10 @@ Filtering by the artist name
 ## SneakPeek of ROSTER CHALLENGE
 
 ### Screenshot of home page
-!["Screenshot of Register"](https://github.com/poojathakkar/sports_learning_online/blob/master/docs/Register.png?raw=true)
+!["Screenshot of Register"](https://github.com/NupurPrakash/roster-challenge/blob/master/docs/Home%20Page.png?raw=true)
 
 ### Screenshot of Search bar
-!["Screenshot of Search bar"](https://github.com/poojathakkar/sports_learning_online/blob/master/docs/Search.png?raw=true)
+!["Screenshot of Search bar"]()
 
 
 ## Project Setup
