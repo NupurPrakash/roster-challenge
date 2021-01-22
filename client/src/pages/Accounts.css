@@ -29,10 +29,8 @@
   padding: 20px;
   
 }
-
 .accounts__artistname {
   border: 1px solid black;
-  display: flex;
   width: 200px;
   text-align: center;
   padding: 5px;

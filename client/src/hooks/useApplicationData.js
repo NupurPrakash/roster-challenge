@@ -3,6 +3,9 @@ import axios from 'axios';
 
 const useApplicationData = () => {
   const [state, setState] = useState({earnings: []});
+  const [stateArtist, setStateArtist] = useState({earnings: []});
+
+  
 
 
   useEffect(() => {
@@ -10,13 +13,17 @@ const useApplicationData = () => {
       method: 'GET',
       url: '/earnings'
     })
-    .then(result => setState(prev => ({ ...prev, earnings: result.data})))
+    .then(result => {setState(prev => ({ ...prev, earnings: result.data})) 
+                      setStateArtist(prev => ({ ...prev, earnings: result.data})) }
+                    
+    )
     .catch((err) => console.log(err))
   }, []);
 
   return {
     state,
-    setState
+    setState,
+    stateArtist
   }
 }
 export default useApplicationData;

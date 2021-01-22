@@ -4,10 +4,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Accounts from './pages/Accounts';
 import Search from './components/Search';
+import useApplicationData from './hooks/useApplicationData';
 
 function App() {
   
   const [searchTerm, setSearchTerm] = useState("");
+  const {state, setState, stateArtist} = useApplicationData();
 
   useEffect(() => {
     setSearchTerm(searchTerm)
@@ -18,15 +20,13 @@ function App() {
     <Router>
       <Switch>
         <Route path='/'>
-          <Navbar onSearchTermUpdate={setSearchTerm} />
-          <Accounts />
+          <Navbar onSearchTermUpdate={setSearchTerm} searchTerm={searchTerm} setState={setState} stateArtist={stateArtist} />
+          <Accounts state={state} setState={setState} />
         </Route>
-        <Route path='/search' render={({history}) =>
-        <>
-          <Navbar onSearchTermUpdate={setSearchTerm} searchTerm={setSearchTerm} />
-          <Search history={history} onSearchTermUpdate={setSearchTerm} searchTerm={searchTerm} />
-        </>
-        }/> 
+        {/* <Route path='/search'>
+          <Navbar onSearchTermUpdate={setSearchTerm} searchTerm={searchTerm} />
+          <Search  onSearchTermUpdate={setSearchTerm} searchTerm={searchTerm} />        
+        </Route> */}
       </Switch>
     </Router>
   );

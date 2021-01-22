@@ -4,22 +4,22 @@ import Accounts from '../pages/Accounts';
 
 function Search(props) {
 
-  const styles = {
-    display: "flex",
-    margin: "50 auto",
-  };
-  
+  // const styles = {
+  //   display: "flex",
+  //   margin: "50 auto",
+  // };
+  console.log(props);
 
-  const [artist, setArtist] = useState([]);
-  console.log("props from search", props)
-  useEffect(() => {
-    axios.get(`/api/searchArtist/${props.searchTerm}`)
-      .then(response => {
-        setArtist(response.data);
-        console.log("Artists",artist);
-      })
-      .catch(err => console.log(err.mesage));
-    },[]);
+  // const [artist, setArtist] = useState([]);
+  // console.log("props from search", props)
+  // useEffect(() => {
+  //   axios.get(`/api/searchArtist/${props.searchTerm}`)
+  //     .then(response => {
+  //       setArtist(response.data);
+  //       console.log("Artists",artist);
+  //     })
+  //     .catch(err => console.log(err.mesage));
+  //   },[]);
 
   return (
     <div className="search__artist">

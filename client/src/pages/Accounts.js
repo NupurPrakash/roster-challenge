@@ -6,11 +6,11 @@ import { Table } from 'reactstrap';
 
 import './Accounts.css';
 
-import useApplicationData from '../hooks/useApplicationData';
+// import useApplicationData from '../hooks/useApplicationData';
 
-function Accounts() {
-  const {state, setState} = useApplicationData();
-  const artistAccount = state.earnings.map(comp => 
+function Accounts(props) {
+  // const {state, setState} = useApplicationData();
+  const artistAccount = props.state.earnings.map(comp => 
     <tr>
       <td className='accounts__artistname'>{comp.artist}</td>
       <td className='accounts__rate'>{comp.rate}</td>

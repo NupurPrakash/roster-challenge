@@ -1,10 +1,20 @@
 import React, {useState} from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 
 function Navbar(props) {
+  console.log("Props from navbar", props);
   const [value, setValue] = useState('');
+
+  const handleClick = () => {
+    // gett data from search input
+    // make new array from state and filter through earnings
+    // setState the new array
+    let artistName = props.searchTerm.length;
+    let element = props.stateArtist.earnings;
+    const newArr = element.filter(elm => elm.artist.substring(0,artistName).toUpperCase() === props.searchTerm.toUpperCase());
+    props.setState({"earnings":newArr});
+  }
   return (
     <>
       <div className='navbar'>
@@ -30,10 +40,10 @@ function Navbar(props) {
               }}
               onBlur={event => {setValue('')}}
             />
+
             <div className='navbar__icon'>
-              <Link to='/search' >
-                <SearchIcon className='navbar__searchIcon' />
-              </Link>
+                <SearchIcon className='navbar__searchIcon' onClick={handleClick}
+                />
             </div>
           </form>
         </div>
