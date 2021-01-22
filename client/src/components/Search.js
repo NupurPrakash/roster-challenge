@@ -23,13 +23,13 @@ function Search(props) {
 
   return (
     <div className="search__artist">
-      {artist.length === 0 ? (
+      {/* {artist.length === 0 ? (
         <div style={styles}>
           <h2>Artist name not found!!</h2>
-          </div> ) : ( <div className="search__artistName">
-            { artist.map(name => <Accounts key={name.id} {...name} />)}</div>)
+          </div> ) : ( <h2>Hello</h2>)
       }
-      
+       */}
+       <h1>Hello</h1>
     </div>
   )
 }
